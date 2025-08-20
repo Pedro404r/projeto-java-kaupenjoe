@@ -1,0 +1,14 @@
+na aula 2 que falou sobre tipo de dados:
+1. inteiros
+- aceita números de -2147483648 (2.1 bilhões) até 2147483648
+- exemplo: int numeroPi = 3.14;
+2. tipo float
+- armazena números reais (com decimais)
+- quantidade limitada
+- exemplo: float preco = 5.99f;  // f indica que é float
+System.out.println(preco);
+- pouco espaço a se armazenar
+3. double
+- igual ao float, mas com + armazenamento
+
+
