@@ -1,0 +1,27 @@
+package whoami; // ajuda na organização, demonstrando de onde é a origem do código
+
+import java.util.Scanner; // importando o scanner
+ 
+public class Main { // main
+    public static void main(String[] args) {
+       int nome = 1;
+       int idade = 24;
+
+       System.out.println(nome); // variavel 1, inútil
+       System.out.println(idade); // variavel 2, inútil
+
+       System.out.println("Por favor, agora insira sua idade"); // println = print in line
+       Scanner scanner = new Scanner(System.in); // chamando o scanner
+       int numero = scanner.nextInt(); // vai salvar o armazenamento na variavel // scanner serve pra ler oque é digitado no teclado
+     
+       System.out.println("Você escolheu o número " + numero); // usa "" para separar, ou escrever váriaveis em um print
+
+       System.out.println("Por favor, digite o seu nome"); // Perguntando e logo abaixo vem um input (scanner) perguntando qual seria  o nome do usuário
+
+       String input = scanner.next(); // "next" = uma linha
+
+       System.out.println("Seu nome é: " + input); // salva oque eu digitei na string *input* e da um print
+
+       System.out.println("Formulario teste!");
+;    }
+}
