@@ -3,15 +3,15 @@ package whoami;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Declaração da main
 
        // Adição
-       int a = 300;
-       int b = 400;
+       int a = 300; // variavel a que recebe 300
+       int b = 400; // variavel b que recebe 400
 
-       int peso = a + b;
+       int peso = a + b; // soma (de exemplo coloquei peso)
 
-       System.out.println("O seu peso é: " + peso);
+       System.out.println("O seu peso é: " + peso); // 
 
        // Subtração
        int subt = a - b;
@@ -32,5 +32,7 @@ public class Main {
        // Módulo
        int module = a % b;
        System.out.println("O resultado do módulo é: " + module);
+
+ // Para usar outros recursos como valor absoluto: System.out.println("Teste" + Math.(abs por exemplo que seria absolute)(200);
     }
 }
