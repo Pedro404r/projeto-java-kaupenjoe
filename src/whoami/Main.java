@@ -4,33 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int pontosCompletos = 100;
+        int pontosAtuais = 100;
 
-       // Adição
-       int a = 300;
-       int b = 400;
+        int pontosFaltando = pontosCompletos - pontosAtuais * 1;
 
-       int peso = a + b;
+        boolean verificarPontos = pontosAtuais >= pontosCompletos;
 
-       System.out.println("O seu peso é: " + peso);
+        System.out.println("Você tem uma pontuação de: " + pontosAtuais);
+        System.out.println("Você tem os pontos suficientes para passar? " + verificarPontos);
+        System.out.println("Faltam: " + pontosFaltando);
 
-       // Subtração
-       int subt = a - b;
-       System.out.println("O resultado da subtração é: " + subt);
-
-       // Multiplicação
-       int mult = a * b;
-       System.out.println("O resultado da multiplicação é: " + mult);
-
-       // Divisão
-       int divi = a / b;
-       System.out.println("O resultado da divisão é: " + divi);
-
-       // Divisão com resto
-       int divirst = b / a;
-       System.out.println("O resultado da divisão com resto é: " + divirst);
-
-       // Módulo
-       int module = a % b;
-       System.out.println("O resultado do módulo é: " + module);
+     
     }
 }
