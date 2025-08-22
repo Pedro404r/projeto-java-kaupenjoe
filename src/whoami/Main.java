@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Você tem uma pontuação de: " + pontosAtuais);
         System.out.println("Você tem os pontos suficientes para passar? " + verificarPontos);
         System.out.println("Faltam: " + pontosFaltando);
+        
 
      
     }
