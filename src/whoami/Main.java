@@ -4,18 +4,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int pontosCompletos = 100;
-        int pontosAtuais = 100;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quanto de vida você tem?");
+        int vida = scanner.nextInt();
+        boolean estaVivo = vida > 0;
 
-        int pontosFaltando = pontosCompletos - pontosAtuais * 1;
+        if(estaVivo) {
+            System.out.println("Você está vivo!");
+        } else {
+            System.out.println("Parece que você está morto..");
+        }
 
-        boolean verificarPontos = pontosAtuais >= pontosCompletos;
+        int pontos = scanner.nextInt();
 
-        System.out.println("Você tem uma pontuação de: " + pontosAtuais);
-        System.out.println("Você tem os pontos suficientes para passar? " + verificarPontos);
-        System.out.println("Faltam: " + pontosFaltando);
-        
-
-     
+        if(pontos >= 100) {
+            System.out.println("Você foi muito bem!");
+        } else if(pontos >= 50) {
+            System.out.println("Resultado mediano!");
+        } else {
+            System.out.println("Você não passou!");
+        }
     }
 }
