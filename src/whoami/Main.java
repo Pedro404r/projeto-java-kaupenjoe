@@ -4,45 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Arrays: forma de armazenar várias informações relacionadas em uma só variável
-
-        // Criando um array de perguntas
-        String[] perguntas = {
-            "Qual o sobrenome de Harry (filme de magia)?",
-            "Meu nome completo é.. Pedro (qual o sobrenome)?",
-            "O nome do seu cachorro é.. Me(..)?"
-        };
-
-        // Criando um array de respostas correspondentes
-        String[] respostas = {
-            "Potter",
-            "Albardeiro",
-            "Mel"
-        };
-
-        // Scanner para ler as respostas do usuário
+        System.out.println("Quantos cadastros você quer fazer?")
         Scanner scanner = new Scanner(System.in);
+        int qtdCadastros = scanner.nextInt(); 
 
-        // Variável para contar quantas respostas foram corretas
-        int acertos = 0;
-
-        // Loop para percorrer todas as perguntas
-        for (int i = 0; i < perguntas.length; i++) {
-            System.out.println(perguntas[i]);            // Mostra a pergunta
-            String respostaUsuario = scanner.next();     // Lê a resposta do usuário
-
-            // Compara a resposta do usuário com a resposta correta (ignora maiúsculas/minúsculas)
-            if (respostaUsuario.equalsIgnoreCase(respostas[i])) {
-                System.out.println("Parabéns, você acertou!");
-                acertos++;
-            } else {
-                System.out.println("Que pena, você errou!");
-            }
-            System.out.println(); // linha em branco para melhorar visualização
-        }
-
-        System.out.println("Você acertou " + acertos + " de " + perguntas.length + " perguntas.");
-
-        scanner.close();
-    }
+        
+   }
 }
