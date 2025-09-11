@@ -1,14 +1,115 @@
-na aula 2 que falou sobre tipo de dados:
-1. inteiros
-- aceita números de -2147483648 (2.1 bilhões) até 2147483648
-- exemplo: int numeroPi = 3.14;
-2. tipo float
-- armazena números reais (com decimais)
-- quantidade limitada
-- exemplo: float preco = 5.99f;  // f indica que é float
-System.out.println(preco);
-- pouco espaço a se armazenar
-3. double
-- igual ao float, mas com + armazenamento
+Claro! Vou montar um conteúdo **completo, organizado e didático** para sua aula sobre tipos de dados em Java, incluindo explicações, exemplos corretos e dicas importantes. Assim fica ótimo para estudo ou revisão.
 
+---
 
+# Aula 2 – Tipos de Dados em Java
+
+---
+
+## 1. Tipos Inteiros (`int`)
+
+### O que é?
+
+* Tipo para armazenar números inteiros, ou seja, sem parte decimal.
+* Usado para contar, identificar índices, valores discretos, etc.
+
+### Faixa de valores
+
+* Vai de **-2.147.483.648** até **2.147.483.647**
+  (Isso é aproximadamente ±2 bilhões)
+
+### Exemplo correto
+
+```java
+int idade = 24;
+int quantidade = 1000;
+```
+
+### Exemplo incorreto
+
+```java
+int numeroPi = 3.14;  // ERRO! 3.14 é decimal e não pode ser armazenado em int
+```
+
+> Para números maiores, use `long` (64 bits).
+
+---
+
+## 2. Tipo Ponto Flutuante: `float`
+
+### O que é?
+
+* Armazena números reais, ou seja, que têm parte decimal.
+* Usa menos espaço que o `double`, porém com **menor precisão**.
+
+### Características
+
+* Precisão simples (aproximadamente 6 a 7 dígitos significativos).
+* Ocupa 32 bits de memória.
+* Necessário usar o sufixo **`f`** ao atribuir valores literais decimais.
+
+### Exemplo
+
+```java
+float preco = 5.99f;  // O 'f' indica que é um float
+System.out.println(preco);  // Exibe: 5.99
+```
+
+---
+
+## 3. Tipo Ponto Flutuante: `double`
+
+### O que é?
+
+* Também armazena números reais, porém com **precisão dupla**.
+* É o tipo mais usado para números decimais em Java.
+
+### Características
+
+* Precisão de aproximadamente 15 a 16 dígitos significativos.
+* Ocupa 64 bits de memória.
+* Não precisa do sufixo `f` para valores decimais.
+
+### Exemplo
+
+```java
+double pi = 3.14159265359;
+System.out.println(pi);  // Exibe: 3.14159265359
+```
+
+---
+
+## 4. Comparação entre `float` e `double`
+
+| Característica      | `float`                | `double`                    |
+| ------------------- | ---------------------- | --------------------------- |
+| Memória ocupada     | 32 bits                | 64 bits                     |
+| Precisão            | \~6 a 7 dígitos        | \~15 a 16 dígitos           |
+| Sufixo para literal | Necessário usar `f`    | Não precisa de sufixo       |
+| Uso típico          | Quando memória importa | Para a maioria dos cálculos |
+
+---
+
+## 5. Resumo dos tipos básicos numéricos
+
+| Tipo     | Tamanho (bits) | Valor mínimo   | Valor máximo  | Exemplo de declaração   |
+| -------- | -------------- | -------------- | ------------- | ----------------------- |
+| `int`    | 32             | -2.147.483.648 | 2.147.483.647 | `int idade = 25;`       |
+| `float`  | 32             | ±1.4E-45       | ±3.4E+38      | `float preco = 10.99f;` |
+| `double` | 64             | ±4.9E-324      | ±1.8E+308     | `double pi = 3.1415;`   |
+
+---
+
+## 6. Dicas Importantes
+
+* Sempre use o tipo mais adequado para seu dado:
+
+  * Use `int` para números inteiros.
+  * Use `double` para números decimais em geral.
+  * Use `float` se precisar economizar memória e aceitar menos precisão.
+
+* Para números muito grandes, além do intervalo do `int`, use `long`.
+
+* Lembre-se de usar `f` para valores `float`, senão o Java trata como `double` por padrão.
+
+---

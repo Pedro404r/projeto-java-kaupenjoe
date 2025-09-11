@@ -1,27 +1,42 @@
-package whoami; // ajuda na organização, demonstrando de onde é a origem do código
+package whoami; // Pacote para organizar o código
 
-import java.util.Scanner; // importando o scanner
- 
-public class Main { // main
+import java.util.Scanner; // Importa a classe Scanner para entrada de dados pelo teclado
+
+public class Main {
     public static void main(String[] args) {
-       int nome = 1;
-       int idade = 24;
+        // Declaração e inicialização de variáveis (exemplo)
+        int nomeExemplo = 1;    // Variável de exemplo (não utilizada para entrada de nome real)
+        int idadeExemplo = 24;  // Variável de exemplo (não utilizada para entrada real)
 
-       System.out.println(nome); // variavel 1, inútil
-       System.out.println(idade); // variavel 2, inútil
+        // Exibindo valores das variáveis exemplo no console
+        System.out.println("Valor da variável nomeExemplo: " + nomeExemplo);
+        System.out.println("Valor da variável idadeExemplo: " + idadeExemplo);
 
-       System.out.println("Por favor, agora insira sua idade"); // println = print in line
-       Scanner scanner = new Scanner(System.in); // chamando o scanner
-       int numero = scanner.nextInt(); // vai salvar o armazenamento na variavel // scanner serve pra ler oque é digitado no teclado
-     
-       System.out.println("Você escolheu o número " + numero); // usa "" para separar, ou escrever váriaveis em um print
+        // Criando um objeto Scanner para capturar entrada do usuário
+        Scanner scanner = new Scanner(System.in);
 
-       System.out.println("Por favor, digite o seu nome"); // Perguntando e logo abaixo vem um input (scanner) perguntando qual seria  o nome do usuário
+        // Solicitando ao usuário que digite sua idade
+        System.out.println("Por favor, insira sua idade:");
 
-       String input = scanner.next(); // "next" = uma linha
+        // Lendo um número inteiro digitado pelo usuário e armazenando na variável 'idadeUsuario'
+        int idadeUsuario = scanner.nextInt();
 
-       System.out.println("Seu nome é: " + input); // salva oque eu digitei na string *input* e da um print
+        // Exibindo a idade digitada
+        System.out.println("Você escolheu a idade: " + idadeUsuario);
 
-       System.out.println("Formulario teste!");
-;    }
+        // Solicitando ao usuário que digite seu nome
+        System.out.println("Por favor, digite seu nome:");
+
+        // Lendo o nome digitado pelo usuário (apenas uma palavra)
+        String nomeUsuario = scanner.next();
+
+        // Exibindo o nome digitado
+        System.out.println("Seu nome é: " + nomeUsuario);
+
+        // Mensagem final
+        System.out.println("Formulário teste!");
+
+        // Fechando o scanner para liberar recursos
+        scanner.close();
+    }
 }
