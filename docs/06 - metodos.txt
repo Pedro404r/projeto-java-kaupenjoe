@@ -1,21 +1,29 @@
+// Define o pacote onde essa classe está localizada
 package whoami;
 
+// Classe principal do programa
 public class Main {
+
+    // Método principal que será executado ao iniciar o programa
     public static void main(String[] args) {
+
+        // Declara e inicializa um array de Strings com 4 perguntas
         String[] perguntas = new String[4];
         perguntas[0] = "Qual o nome do ser denominado de 'Bigodinho'?";
         perguntas[1] = "Quando ocorrou a primeira guerra mundial";
         perguntas[2] = "Qual o nome para cachorros mais comum no Brasil?";
         perguntas[3] = "Qual o sobrenome do maior apresentador brasileiro já visto?";
 
+        // Declara e inicializa um array de Strings com as respostas correspondentes
         String[] respostas = new String[4];
         respostas[0] = "Hitler";
         respostas[1] = "1945";
         respostas[2] = "Caramelo";
         respostas[3] = "Santos";
-        
+
+        // Chama a função que imprime perguntas e respostas 2 vezes, repetidamente
         saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-        System.out.println("---------");
+        System.out.println("---------");  // Imprime uma linha separadora
         saidaPerguntasERespostasxvezes(2, perguntas, respostas);
         System.out.println("---------");
         saidaPerguntasERespostasxvezes(2, perguntas, respostas);
@@ -24,19 +32,22 @@ public class Main {
         System.out.println("---------");
         saidaPerguntasERespostasxvezes(2, perguntas, respostas);
     }
-   
+
+    // Função que recebe um número 'x' e imprime as perguntas e respostas 'x' vezes
     public static void saidaPerguntasERespostasxvezes(int x, String[] perguntas, String[] respostas) {
         for(int c = 0; c < x; c++) {
             saidaPerguntasERespostas(perguntas, respostas);
         }
     }
-   
+
+    // Função que percorre os arrays de perguntas e respostas e imprime cada par
     public static void saidaPerguntasERespostas(String[] perguntas, String[] respostas) {
         for(int i = 0; i < perguntas.length; i++) {
             System.out.println("P: " + perguntas[i] + "| R: " + respostas[i]);
         }
     }
 
+    // Função extra que retorna a soma de dois números inteiros
     public static int somaDeDoisNumeros(int x, int y) {
         return x + y;
     }
