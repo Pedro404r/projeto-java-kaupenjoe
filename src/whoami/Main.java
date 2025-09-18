@@ -1,4 +1,11 @@
 package whoami;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -13,31 +20,30 @@ public class Main {
         respostas[1] = "1945";
         respostas[2] = "Caramelo";
         respostas[3] = "Santos";
-        
-        saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-        System.out.println("---------");
-        saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-        System.out.println("---------");
-        saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-        System.out.println("---------");
-        saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-        System.out.println("---------");
-        saidaPerguntasERespostasxvezes(2, perguntas, respostas);
-    }
-   
-    public static void saidaPerguntasERespostasxvezes(int x, String[] perguntas, String[] respostas) {
-        for(int c = 0; c < x; c++) {
-            saidaPerguntasERespostas(perguntas, respostas);
-        }
-    }
-   
-    public static void saidaPerguntasERespostas(String[] perguntas, String[] respostas) {
-        for(int i = 0; i < perguntas.length; i++) {
-            System.out.println("P: " + perguntas[i] + "| R: " + respostas[i]);
-        }
-    }
 
-    public static int somaDeDoisNumeros(int x, int y) {
-        return x + y;
+        // lista de strings
+        List<String> maisQuestoes = new ArrayList<>();
+        maisQuestoes.add("Qual o nome do maior jogador de futebol de todos os tempos?");
+        maisQuestoes.add("Qual o nome do maior jogador de basquete de todos os tempos?");
+        maisQuestoes.add("Nome da pior deputada trans brasileira");
+    //  maisQuestoes.clear();
+    
+        Set<String> PaisesAVisitar = new HashSet<>();
+        PaisesAVisitar.add("Japão");
+        PaisesAVisitar.add("Canadá");
+        PaisesAVisitar.add("Inglaterra");
+
+        System.out.println(PaisesAVisitar);
+
+        Map<String, Integer> populacaoCadaPais = new HashMap<>();
+        populacaoCadaPais.put("Japão", 125000000);
+        populacaoCadaPais.put("Canadá", 38000000);
+        populacaoCadaPais.put("Inglaterra", 56000000);
+
+        System.out.println(populacaoCadaPais.get("Japão"));
+
+        for(int i = 0; i < maisQuestoes.size(); i++) {
+            System.out.println(maisQuestoes.get(i));
+        }
     }
 }
