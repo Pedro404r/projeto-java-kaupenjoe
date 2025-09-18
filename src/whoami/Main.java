@@ -10,34 +10,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // calculadora simples
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o primeiro número:");
-        double num1 = scanner.nextDouble();
-        System.out.println("Digite o segundo número:");
-        double num2 = scanner.nextDouble();
-        System.out.println("Escolha a operação (+, -, *, /):");
-        String operacao = scanner.next();
-        double resultado = 0;
-        switch (operacao) {
-            case "+":
-                resultado = num1 + num2;
-                break;
-            case "-":
-                resultado = num1 - num2;
-                break;
-            case "/":
-                resultado = num1 / num2;
-                break;
-            case "*":
-                resultado = num1 * num2;
-                break;
-            default:
-                System.out.println("Operação inválida!");
-                return;
+       // adicionar usuario simples
+       System.out.println("Por favor digite o nome do usuario novo");
+       Scanner scanner = new Scanner(System.in);
+       String nome = scanner.nextLine();
 
+       System.out.println("Agora digite qual será a senha dele");
+       String senha = scanner.nextLine();
+       
+       System.out.println("Agora digite o cargo dele");
 
-    }
-        System.out.println("Resultado: " + resultado);
-        scanner.close();
+         String cargo = scanner.nextLine();
+
+        
+         System.out.println("Você criou um novo usuário com sucesso!");
+         System.out.println("Nome: " + nome);
+         System.out.println("Senha: " + senha);
+         System.out.println("Cargo: " + cargo);
+
+        
 }}
