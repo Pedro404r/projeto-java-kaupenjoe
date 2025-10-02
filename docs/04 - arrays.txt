@@ -8,9 +8,7 @@ public class Main {
 
         // Criando um array de perguntas
         String[] perguntas = {
-            "Qual o sobrenome de Harry (filme de magia)?",
-            "Meu nome completo é.. Pedro (qual o sobrenome)?",
-            "O nome do seu cachorro é.. Me(..)?"
+            
         };
 
         // Criando um array de respostas correspondentes

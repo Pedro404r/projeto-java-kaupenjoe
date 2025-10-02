@@ -1,23 +1,22 @@
 package whoami;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.HashMap;
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
-        // verificador de idade simples
+        miniGames();
+    }
+
+    public static void miniGames(){
+        System.out.println("Selecione o minigame que quer jogar");
+        System.out.println("1: Palavras");
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite sua idade: ");
-        int idade = scanner.nextInt();
-        if (idade >= 18) {
-            System.out.println("Você é maior de idade.");
-        } else {
-            System.out.println("Você é menor de idade.");
+        String gameSelecionado = scanner.next();
+        if(gameSelecionado.equals("1")) {
+            MiniGamePalavra.PlayPalavra();
+        } else{
+            System.out.println("Desculpe, este jogo não está disponível");
         }
-        scanner.close();
-}}
+
+    }
+}
